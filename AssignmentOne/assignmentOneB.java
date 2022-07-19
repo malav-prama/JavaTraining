@@ -10,8 +10,8 @@ public class assignmentOneB
       int input = sc.nextInt();
    
       oddEven(input);
-      prime(input);
-      System.out.print(palindrome(input));
+      System.out.println("Prime? "+prime(input));
+      System.out.print("Palindrome? "+palindrome(input));
    
    }
    
@@ -26,11 +26,35 @@ public class assignmentOneB
       }
    }
    
+   public static boolean prime(int input)
+   {
    
+      boolean isPrime=true;
+   
+      if (input==1 || input==0 || input<0)
+      {
+         isPrime=false;
+         return isPrime;
+        
+      }
+      
+      else
+      {
+         for(int i=2;i<=input/2;i++)
+         {
+            int temp=input%i;
+            if(temp==0)
+            {
+               isPrime=false;
+               break;
+            }
+         }
+      return isPrime;
+      }
+   }
    
    public static boolean palindrome(int input)
    {
-   
       int sum=0;
       int temp=input;
       if(temp>=0){
@@ -44,9 +68,5 @@ public class assignmentOneB
        }
       }
       return false;
-   
-   }
-   
-   
-
+  }
 }
