@@ -27,36 +27,6 @@ public class assignmentOneB
    }
    
    
-   public static void prime(int input)
-   {
-   
-      boolean isPrime=false;
-   
-      if (input==1 || input==0 || input<0)
-      {
-         isPrime=false;
-         System.out.println(isPrime);
-      }
-      
-      else
-      {
-         for(int i=2;i<=input/2;i++)
-         {
-            int temp=input%i;
-            if(temp==0)
-            {
-               isPrime=false;
-               break;
-            }
-         }
-      
-         System.out.println(isPrime);
-      
-      }
-   
-   
-   }
-   
    
    public static boolean palindrome(int input)
    {
